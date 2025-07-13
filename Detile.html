@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIK4</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"/>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+    <!-- Navbar-->
+    <header>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/UAS_AIK/img/logo.jpg" alt="Logo" height="40">
+            </a>
+            
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Offcanvas menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- Navigation links -->
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2" aria-current="page" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="Gerakan_Sholat.html">Tata Cara Sholat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="Servis.html">Doa-doa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="Detile.html">Deskripsi</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Search form -->
+                    <form class="d-flex mt-3 mt-lg-0" role="search" onsubmit="performSearch(event)">
+                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Cari rukun, syarat, wudhu, bersuci..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+     <!-- End Nvbar-->
+
+    <!-- Hero Section-->
+     <section class="hero-section">
+      <div class="Teks_header">
+        <h1>Rukun dan Syarat Sah Sholat</h1>
+     </section>
+    <!-- End Hero Section-->
+
+    <main class="main-content">
+        <!-- Services Section -->
+        <div class="container_1"> 
+            <div class="services-grid">
+                <a href="https://quran.nu.or.id/" class="service-card">
+                    <div class="service-icon">
+                      <img src="/UAS_AIK/img/Al-Qur,an.png" alt="Al-Qur'an.">
+                    </div>
+                    <h3 class="service-title">Al-Qur'an Digital</h3>
+                    <div class="service-description">Al Quran digital merupakan salah satu teknologi yang dapat digunakan oleh umat Islam untuk mengakses Al Quran baik secara online, dengan fitur yang mudah untuk dipelajari</div>
+                </a>
+
+               <a href="https://id.wikipedia.org/wiki/Masjid" class="service-card">
+                    <div class="service-icon">
+                        <img src="/UAS_AIK/img/icon_masjid.png" alt="Masjid Icon" />
+                    </div>
+                    <h3 class="service-title">Masjid</h3>
+                    <div class="service-description">Sebuah bangunan yang digunakan untuk ibadah umum oleh umat Islam, berbagai kegiatan keagamaan dan sosial lainnya, serta tempat untuk belajar agama.</div>
+                </a>
+                <a href="https://qiblafinder.withgoogle.com/intl/id/desktop/finder" class="service-card">
+                    <div class="service-icon">
+                      <img src="/UAS_AIK/img/mekkah.png" alt="Mekkah">
+                    </div>
+                    <h3 class="service-title">Kiblat</h3>
+                    <div class="service-description">Kiblat adalah arah Ka'bah di Masjidil Haram, Mekah, yang menjadi patokan arah bagi umat Islam saat melaksanakan ibadah, terutama shalat</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Rukun Sholat Section -->
+        <div class="content-section" id="rukun">
+            <div class="container">
+                <div class="content-card">
+                    <div class="content-header">
+                        <h2 class="content-title">Rukun Sholat</h2>
+                        <div class="title-decoration"></div>
+                    </div>
+                    <div class="content-body">
+                        <p class="content-intro">Rukun shalat adalah bagian-bagian penting dalam shalat yang wajib dilaksanakan dengan benar dan sempurna. Jika salah satu rukun terlewatkan, shalat dianggap batal. Secara umum, rukun shalat ada 13, yaitu:</p>
+                        <div class="rukun-list">
+                            <div class="rukun-item">
+                                <span class="rukun-number">1</span>
+                                <div class="rukun-content">
+                                    <h4>Niat</h4>
+                                    <p>Niat dilakukan di dalam hati saat takbiratul ihram.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">2</span>
+                                <div class="rukun-content">
+                                    <h4>Takbiratul Ihram</h4>
+                                    <p>Mengucapkan "Allahu Akbar" sambil mengangkat kedua tangan.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">3</span>
+                                <div class="rukun-content">
+                                    <h4>Berdiri bagi yang Mampu</h4>
+                                    <p>Bagi yang mampu, shalat harus dilakukan sambil berdiri.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">4</span>
+                                <div class="rukun-content">
+                                    <h4>Membaca Surat Al-Fatihah</h4>
+                                    <p>Membaca surat Al-Fatihah pada setiap rakaat shalat.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">5</span>
+                                <div class="rukun-content">
+                                    <h4>Rukuk</h4>
+                                    <p>Membungkuk dengan tuma'ninah (tenang) sehingga punggung dan kepala sejajar.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">6</span>
+                                <div class="rukun-content">
+                                    <h4>I'tidal</h4>
+                                    <p>Berdiri tegak setelah rukuk.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">7</span>
+                                <div class="rukun-content">
+                                    <h4>Sujud</h4>
+                                    <p>Melakukan sujud dua kali pada setiap rakaat dengan tuma'ninah.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">8</span>
+                                <div class="rukun-content">
+                                    <h4>Duduk di Antara Dua Sujud</h4>
+                                    <p>Duduk dengan tuma'ninah setelah melakukan sujud.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">9</span>
+                                <div class="rukun-content">
+                                    <h4>Tasyahud Akhir</h4>
+                                    <p>Membaca tasyahud akhir.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">10</span>
+                                <div class="rukun-content">
+                                    <h4>Duduk saat Tasyahud Akhir</h4>
+                                    <p>Duduk dengan tuma'ninah saat membaca tasyahud akhir.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">11</span>
+                                <div class="rukun-content">
+                                    <h4>Membaca Shalawat Nabi</h4>
+                                    <p>Membaca shalawat kepada Nabi Muhammad SAW pada tasyahud akhir.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">12</span>
+                                <div class="rukun-content">
+                                    <h4>Salam</h4>
+                                    <p>Mengucapkan salam ke kanan dan ke kiri.</p>
+                                </div>
+                            </div>
+                            <div class="rukun-item">
+                                <span class="rukun-number">13</span>
+                                <div class="rukun-content">
+                                    <h4>Tertib</h4>
+                                    <p>Melakukan rukun shalat secara berurutan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Syarat Sah Sholat Section -->
+        <div class="content-section" id="syarat">
+            <div class="container">
+                <div class="content-card">
+                    <div class="content-header">
+                        <h2 class="content-title">Syarat Sah Sholat</h2>
+                        <div class="title-decoration"></div>
+                    </div>
+                    <div class="content-body">
+                        <p class="content-intro">Syarat sah shalat adalah ketentuan-ketentuan yang harus dipenuhi agar shalat yang dikerjakan sah dan diterima oleh Allah. Syarat-syarat ini meliputi hal-hal yang berkaitan dengan kondisi orang yang shalat, waktu, tempat, dan perlengkapan yang digunakan.</p>
+                        <div class="syarat-list">
+                            <div class="syarat-item">
+                                <span class="syarat-number">1</span>
+                                <div class="syarat-content">
+                                    <h4>Beragama Islam</h4>
+                                    <p>Shalat hanya sah dilakukan oleh seorang yang beragama Islam.</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">2</span>
+                                <div class="syarat-content">
+                                    <h4>Berakal Sehat</h4>
+                                    <p>Shalat tidak sah bagi orang yang gila atau hilang akal.</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">3</span>
+                                <div class="syarat-content">
+                                    <h4>Baligh</h4>
+                                    <p>Shalat hanya wajib bagi yang sudah mencapai usia baligh (dewasa secara agama).</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">4</span>
+                                <div class="syarat-content">
+                                    <h4>Suci dari Hadats</h4>
+                                    <div class="sub-list">
+                                        <div class="sub-item">
+                                            <strong>Hadats Kecil:</strong> Yaitu kondisi yang mewajibkan wudhu, seperti buang air kecil, buang air besar, kentut.
+                                        </div>
+                                        <div class="sub-item">
+                                            <strong>Hadats Besar:</strong> Yaitu kondisi yang mewajibkan mandi besar (junub), seperti haid, nifas, atau berhubungan suami istri.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">5</span>
+                                <div class="syarat-content">
+                                    <h4>Suci dari Najis</h4>
+                                    <p>Pakaian, badan, dan tempat shalat harus bersih dari najis (kotoran yang dianggap najis dalam Islam).</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">6</span>
+                                <div class="syarat-content">
+                                    <h4>Menutup Aurat</h4>
+                                    <p>Seluruh anggota tubuh yang termasuk aurat (bagian tubuh yang wajib ditutup) harus tertutup kain yang suci, baik bagi laki-laki maupun perempuan, meskipun shalat sendirian.</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">7</span>
+                                <div class="syarat-content">
+                                    <h4>Menghadap Kiblat</h4>
+                                    <p>Shalat harus menghadap arah kiblat, yaitu Ka'bah di Masjidil Haram, Mekah.</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">8</span>
+                                <div class="syarat-content">
+                                    <h4>Telah Masuk Waktu Shalat</h4>
+                                    <p>Shalat harus dikerjakan pada waktu yang telah ditentukan.</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">9</span>
+                                <div class="syarat-content">
+                                    <h4>Mengetahui Rukun Shalat</h4>
+                                    <p>Pelaksana shalat harus mengetahui dan memahami rukun-rukun shalat.</p>
+                                </div>
+                            </div>
+                            <div class="syarat-item">
+                                <span class="syarat-number">10</span>
+                                <div class="syarat-content">
+                                    <h4>Niat</h4>
+                                    <p>Niat untuk melaksanakan shalat harus ada dalam hati.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuntunan Wudhu Section -->
+        <div class="content-section" id="wudhu">
+            <div class="container">
+                <div class="content-card">
+                    <div class="content-header">
+                        <h2 class="content-title">Tuntunan Wudhu</h2>
+                        <div class="title-decoration"></div>
+                    </div>
+                    <div class="content-body">
+                        <p class="content-intro">Wudhu adalah salah satu syarat sah shalat. Wudhu harus dilakukan dengan tertib (berurutan) dan menyeluruh. Berikut adalah tuntunan lengkap cara berwudhu yang benar:</p>
+                        
+                        <div class="wudhu-steps">
+                            <!-- Niat Wudhu -->
+                            <div class="wudhu-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h6>Niat Wudhu</h6>
+                                    <div class="arabic-text">نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ الْأَصْغَرِ فَرْضًا لِلَّهِ تَعَالَى</div>
+                                    <div class="transliteration"><strong>Nawaitu wudhu'a lirof'il hadatsil ashghori fardhon lillaahi ta'aala</strong></div>
+                                    <div class="translation"><strong>Artinya:</strong> "Saya niat wudhu untuk menghilangkan hadats kecil fardhu karena Allah Ta'ala"</div>
+                                </div>
+                            </div>
+
+                            <!-- Membasuh Telapak Tangan -->
+                            <div class="wudhu-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h6>Membasuh Telapak Tangan</h6>
+                                    <div class="arabic-text">بِسْمِ اللَّهِ</div>
+                                    <div class="transliteration"><strong>Bismillah</strong></div>
+                                    <div class="translation"><strong>Artinya:</strong> "Dengan nama Allah"</div>
+                                    <p>Membasuh kedua telapak tangan sebanyak 3 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Berkumur-kumur -->
+                            <div class="wudhu-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h6>Berkumur-kumur</h6>
+                                    <p>Berkumur-kumur sebanyak 3 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Membasuh Hidung -->
+                            <div class="wudhu-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h6>Membasuh Hidung</h6>
+                                    <p>Membasuh hidung dengan air sebanyak 3 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Membasuh Wajah -->
+                            <div class="wudhu-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h6>Membasuh Wajah</h6>
+                                    <p>Membasuh seluruh wajah sebanyak 3 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Membasuh Kedua Tangan -->
+                            <div class="wudhu-step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <h6>Membasuh Kedua Tangan</h6>
+                                    <p>Membasuh kedua tangan sampai siku sebanyak 3 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Mengusap Kepala -->
+                            <div class="wudhu-step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">
+                                    <h6>Mengusap Kepala</h6>
+                                    <p>Mengusap kepala sebanyak 1 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Membasuh Kedua Telinga -->
+                            <div class="wudhu-step">
+                                <div class="step-number">8</div>
+                                <div class="step-content">
+                                    <h6>Membasuh Kedua Telinga</h6>
+                                    <p>Membasuh kedua telinga sebanyak 1 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Membasuh Kedua Kaki -->
+                            <div class="wudhu-step">
+                                <div class="step-number">9</div>
+                                <div class="step-content">
+                                    <h6>Membasuh Kedua Kaki</h6>
+                                    <p>Membasuh kedua kaki sampai mata kaki sebanyak 3 kali</p>
+                                </div>
+                            </div>
+
+                            <!-- Doa Setelah Wudhu -->
+                            <div class="wudhu-step">
+                                <div class="step-number">10</div>
+                                <div class="step-content">
+                                    <h6>Doa Setelah Wudhu</h6>
+                                    <div class="arabic-text">أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيْكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ</div>
+                                    <div class="transliteration"><strong>Asyhadu an laa ilaaha illallahu wahdahu laa syariika lahu wa asyhadu anna muhammadan 'abduhu wa rosuuluh</strong></div>
+                                    <div class="translation"><strong>Artinya:</strong> "Aku bersaksi bahwa tidak ada Tuhan selain Allah yang Maha Esa, tidak ada sekutu bagi-Nya, dan aku bersaksi bahwa Muhammad adalah hamba dan utusan-Nya"</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wudhu-notes">
+                            <h6>Catatan Penting Wudhu:</h6>
+                            <ul>
+                                <li><strong>Tertib:</strong> Wudhu harus dilakukan dengan tertib (berurutan)</li>
+                                <li><strong>Muwalah:</strong> Tidak boleh ada jeda yang lama antar anggota wudhu</li>
+                                <li><strong>Menyeluruh:</strong> Setiap anggota wudhu harus dibasuh secara menyeluruh</li>
+                                <li><strong>Air Suci:</strong> Air yang digunakan harus suci dan mensucikan</li>
+                                <li><strong>Niat:</strong> Niat wudhu harus dilakukan di dalam hati</li>
+                                <li><strong>Hadats Kecil:</strong> Wudhu menghilangkan hadats kecil seperti buang air kecil, besar, atau kentut</li>
+                            </ul>
+                        </div>
+
+                        <div class="wudhu-notes">
+                            <h6>Yang Membatalkan Wudhu:</h6>
+                            <ul>
+                                <li>Buang air kecil atau besar</li>
+                                <li>Kentut</li>
+                                <li>Tidur nyenyak</li>
+                                <li>Hilang akal (gila, mabuk, pingsan)</li>
+                                <li>Bersentuhan kulit dengan lawan jenis yang bukan mahram</li>
+                                <li>Menyentuh kemaluan dengan telapak tangan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="Gerakan_Sholat.html">Tata Cara Sholat</a></li>
+                        <li><a href="Servis.html">Doa-doa</a></li>
+                        <li><a href="Detile.html">Deskripsi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Pembelajaran</h4>
+                    <ul class="footer-links">
+                        <li><a href="#rukun">Rukun Sholat</a></li>
+                        <li><a href="#syarat">Syarat Sah Sholat</a></li>
+                        <li><a href="#wudhu">Tuntunan Wudhu</a></li>
+                        <li><a href="#alquran">Al-Qur'an Digital</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Informasi</h4>
+                    <div class="footer-info">
+                        <p>Penjelasan lengkap tentang rukun dan syarat sah sholat yang wajib diketahui setiap muslim.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="footer-quote">
+                "إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا"<br>
+                Sesungguhnya shalat itu adalah kewajiban yang ditentukan waktunya
+            </div>
+            
+
+        </div>
+    </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"></script>
+
+    <!-- Search Functionality -->
+    <script>
+        // Fungsi untuk menangani parameter URL saat halaman dimuat
+        function handleURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const section = urlParams.get('section');
+            
+            if (section) {
+                // Cari section berdasarkan judul
+                const headers = document.querySelectorAll('.content-title');
+                for (let header of headers) {
+                    if (header.textContent.toLowerCase().includes(section.toLowerCase())) {
+                        setTimeout(() => {
+                            header.closest('.content-card').scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                            header.closest('.content-card').classList.add('search-result-highlight');
+                        }, 500);
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Panggil fungsi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', handleURLParams);
+
+        function performSearch(event) {
+            event.preventDefault();
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (!searchTerm) {
+                alert('Silakan masukkan kata kunci pencarian');
+                return;
+            }
+
+            const searchKeywords = {
+                // Rukun Sholat
+                'rukun': 'Rukun Sholat',
+                'niat': 'Rukun Sholat',
+                'takbiratul': 'Rukun Sholat',
+                'berdiri': 'Rukun Sholat',
+                'fatihah': 'Rukun Sholat',
+                'rukuk': 'Rukun Sholat',
+                'i\'tidal': 'Rukun Sholat',
+                'sujud': 'Rukun Sholat',
+                'duduk': 'Rukun Sholat',
+                'tasyahud': 'Rukun Sholat',
+                'shalawat': 'Rukun Sholat',
+                'salam': 'Rukun Sholat',
+                'tertib': 'Rukun Sholat',
+                
+                // Tuntunan Wudhu
+                'wudhu': 'Tuntunan Wudhu',
+                'wudlu': 'Tuntunan Wudhu',
+                'bersuci': 'Tuntunan Wudhu',
+                'nawaitu': 'Tuntunan Wudhu',
+                'bismillah': 'Tuntunan Wudhu',
+                'berkumur': 'Tuntunan Wudhu',
+                'hidung': 'Tuntunan Wudhu',
+                'wajah': 'Tuntunan Wudhu',
+                'tangan': 'Tuntunan Wudhu',
+                'kepala': 'Tuntunan Wudhu',
+                'telinga': 'Tuntunan Wudhu',
+                'kaki': 'Tuntunan Wudhu',
+                'mata kaki': 'Tuntunan Wudhu',
+                'asyhadu': 'Tuntunan Wudhu',
+                'syahadat': 'Tuntunan Wudhu',
+                
+                // Syarat Sah Sholat
+                'syarat': 'Syarat Sah Sholat',
+                'sah': 'Syarat Sah Sholat',
+                'islam': 'Syarat Sah Sholat',
+                'berakal': 'Syarat Sah Sholat',
+                'baligh': 'Syarat Sah Sholat',
+                'hadats': 'Syarat Sah Sholat',
+                'najis': 'Syarat Sah Sholat',
+                'aurat': 'Syarat Sah Sholat',
+                'kiblat': 'Syarat Sah Sholat',
+                'waktu': 'Syarat Sah Sholat',
+                
+                // Gerakan Sholat
+                'sholat': 'Gerakan_Sholat.html',
+                'shalat': 'Gerakan_Sholat.html',
+                'gerakan': 'Gerakan_Sholat.html',
+                'niat sholat': 'Gerakan_Sholat.html',
+                'takbir': 'Gerakan_Sholat.html',
+                'iftitah': 'Gerakan_Sholat.html',
+                'fatihah': 'Gerakan_Sholat.html',
+                'rukuk': 'Gerakan_Sholat.html',
+                'sujud': 'Gerakan_Sholat.html',
+                'tasyahud': 'Gerakan_Sholat.html',
+                'salam': 'Gerakan_Sholat.html',
+                
+                // Doa dan Dzikir
+                'doa': 'Servis.html',
+                'dzikir': 'Servis.html',
+                'istighfar': 'Servis.html',
+                'tahlil': 'Servis.html',
+                'tasbih': 'Servis.html',
+                'tahmid': 'Servis.html',
+                
+                // Jadwal Sholat
+                'jadwal': 'index.html',
+                'waktu sholat': 'index.html'
+            };
+
+            // Check if search term matches any keywords
+            for (const [keyword, target] of Object.entries(searchKeywords)) {
+                if (searchTerm.includes(keyword)) {
+                    // Jika target adalah halaman lain, redirect
+                    if (target.includes('.html')) {
+                        window.location.href = target;
+                        return;
+                    }
+                    
+                    // Jika target adalah bagian dalam halaman ini, scroll ke sana
+                    const headers = document.querySelectorAll('.content-title');
+                    for (let header of headers) {
+                        if (header.textContent.includes(target)) {
+                            header.closest('.content-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            header.closest('.content-card').classList.add('search-result-highlight');
+                            return;
+                        }
+                    }
+                }
+            }
+
+            // Jika tidak ditemukan, coba cari berdasarkan karakteristik umum
+            if (searchTerm.includes('sholat') || searchTerm.includes('niat') || searchTerm.includes('takbir') || 
+                searchTerm.includes('rukuk') || searchTerm.includes('sujud') || searchTerm.includes('gerakan')) {
+                window.location.href = 'Gerakan_Sholat.html';
+                return;
+            }
+            
+            if (searchTerm.includes('doa') || searchTerm.includes('dzikir') || searchTerm.includes('istighfar') || 
+                searchTerm.includes('tahlil') || searchTerm.includes('tasbih')) {
+                window.location.href = 'Servis.html';
+                return;
+            }
+            
+            if (searchTerm.includes('jadwal') || searchTerm.includes('waktu sholat')) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // If no match found, show alert
+            alert('Maaf, tidak ditemukan hasil untuk pencarian: ' + searchTerm + '\n\nCoba kata kunci:\n- rukun, syarat, sah sholat\n- wudhu, bersuci, nawaitu, bismillah\n- sholat, niat, takbir, rukuk, sujud\n- doa, dzikir, istighfar, tahlil');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1288 @@
+body {
+  background: linear-gradient(135deg, rgb(208, 237, 167) 50%, rgb(7, 72, 50) 100%);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+/* HEADER */
+/*LOGO */
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  margin: 0;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Main content wrapper */
+.main-wrapper {
+  background: linear-gradient(135deg, rgb(208, 237, 167) 50%, rgb(7, 72, 50) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: rgb(208, 237, 167);
+  font-size: 24px;
+  transition: 0.3 color;
+  width: 80px;
+}
+/*SEARCH */
+.form-control {
+  border-width: 3px;
+  border-color: rgb(208, 237, 167);
+  border-radius: 5px;
+}
+.btn-outline-success {
+  background-color: rgb(208, 237, 167);
+  color: black;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+.btn-outline-success:hover {
+  background-color: rgb(10, 81, 57);
+}
+.btn-outline-success {
+  border: none;
+  font-size: 1.25rem;
+}
+.btn-outline-success:focus .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+/*----navbar About---*/
+.nav-link {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  position: relative;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #e8e4e4;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: rgb(208, 237, 167);
+  visibility: hidden;
+  transition: 0.3 ease-in-out;
+}
+.nav-link:hover:before {
+  width: 100%;
+  visibility: visible;
+}
+
+/* Hero section styling */
+.hero-section {
+  background: url(/UAS_AIK/img/masjidil_haram.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 55vh;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section::before {
+  background-color: rgba(0, 0, 0, 0, 6);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+/* Main content styling */
+main {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  padding-top: 20px;
+}
+
+.Teks_header {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/*------- Main Tata Cara Sholat-----*/
+.col {
+  margin-top: 10px;
+  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+}
+.container {
+  padding: 50px;
+  position: relative;
+  z-index: 2;
+}
+.container-fluid {
+  position: relative;
+  z-index: 2;
+}
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-img-container {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(121, 133, 104);
+  transition: all 0.3s ease;
+}
+
+.card-img-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.card-body {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.card-text-content {
+  flex: 2;
+}
+.card-button-container {
+  margin-top: auto;
+  padding-top: 15px;
+}
+.card-title {
+  background: linear-gradient(45deg, rgb(130, 165, 80), rgb(130, 165, 80));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.arabic-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-style: initial;
+}
+.transliteration {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+.translation {
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+/* Main bagian Zikir */
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.dzikir-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.dzikir-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+.meaning {
+  background: #e8f5e8;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  margin-top: 15px;
+}
+
+.meaning-label {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.meaning-text {
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.repetition {
+  background: rgb(182, 215, 135);
+  color: #856404;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.special-notes {
+  background: #e8f5e8;
+  border-left: 4px solid #4caf50;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.special-notes h6 {
+  color: #0c5460;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.special-notes ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.special-notes li {
+  color: #0c5460;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .arabic-text {
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+}
+
+/*.....Style Untuk Jam......*/
+.prayer-widget {
+  background: linear-gradient(135deg, rgb(64, 88, 30), #388e3c);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.prayer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.prayer-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffd54f;
+}
+
+.prayer-date {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 5px 0 0 0;
+}
+
+.clock-section {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.time-display {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.time-info {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 5px 0;
+}
+
+.location-section {
+  text-align: right;
+}
+
+.location-select {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.location-select:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.location-select option {
+  background: #2d7d32;
+  color: white;
+}
+
+.prayer-times-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-time-item {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d7d32;
+  padding: 20px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-right: 1px solid rgba(45, 125, 50, 0.1);
+}
+
+.prayer-time-item:last-child {
+  border-right: none;
+}
+
+.prayer-time-item:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.prayer-time-item.active {
+  background: #2d7d32;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.prayer-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.prayer-time {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.colon {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .prayer-times-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prayer-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .clock-section {
+    margin: 0;
+  }
+
+  .time-display {
+    font-size: 36px;
+  }
+}
+
+/* Search Highlight */
+.search-highlight {
+  background-color: #ffeb3b;
+  color: #000;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+  animation: searchPulse 1s ease-in-out;
+}
+
+@keyframes searchPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 193, 7, 0.3);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    transform: scale(1);
+  }
+}
+
+/* Search Result Highlight Animation */
+.search-result-highlight {
+  animation: searchPulse 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .prayer-times-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .time-display {
+    font-size: 28px;
+  }
+
+  .prayer-widget {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .prayer-name {
+    font-size: 14px;
+  }
+
+  .prayer-time {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer-times-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*--- -----*/
+.container_1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px;
+}
+.background-text {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.service-card {
+  background: rgb(249, 249, 249);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-top: 0 auto;
+  z-index: 2;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(182, 215, 135), rgb(182, 215, 135));
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  background: linear-gradientrgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.service-description {
+  background: linear-gradient(135deg, rgb(182, 215, 135), rgb(182, 215, 135));
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .background-text {
+    font-size: 120px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+}
+
+/* Main Content Styling for Detile.html */
+.main-content {
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.content-section {
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.content-header {
+  background: linear-gradient(135deg, rgb(130, 165, 80), rgb(1, 33, 22));
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.content-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title-decoration {
+  width: 80px;
+  height: 4px;
+  background: rgb(208, 237, 167);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.content-body {
+  padding: 25px;
+}
+
+.content-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+  background: rgba(182, 215, 135, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid rgb(130, 165, 80);
+}
+
+/* Rukun List Styling */
+.rukun-list, .syarat-list {
+  display: grid;
+  gap: 12px;
+}
+
+.rukun-item, .syarat-item {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.rukun-item:hover, .syarat-item:hover {
+  transform: translateX(5px);
+  border-left-color: rgb(130, 165, 80);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.rukun-number, .syarat-number {
+  background: linear-gradient(135deg, rgb(130, 165, 80), rgb(1, 33, 22));
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rukun-content, .syarat-content {
+  flex: 1;
+}
+
+.rukun-content h4, .syarat-content h4 {
+  color: rgb(1, 33, 22);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rukun-content p, .syarat-content p {
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Sub-list styling for Syarat Sah */
+.sub-list {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.sub-item {
+  background: rgba(182, 215, 135, 0.2);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border-left: 3px solid rgb(130, 165, 80);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.sub-item:last-child {
+  margin-bottom: 0;
+}
+
+.sub-item strong {
+  color: rgb(1, 33, 22);
+  font-weight: 600;
+}
+
+/* Responsive Design for Content */
+@media (max-width: 768px) {
+  .content-section {
+    margin: 15px 0;
+    padding: 0 10px;
+  }
+
+  .content-header {
+    padding: 15px;
+  }
+
+  .content-title {
+    font-size: 1.8rem;
+  }
+
+  .content-body {
+    padding: 20px;
+  }
+
+  .content-intro {
+    font-size: 1rem;
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .rukun-item, .syarat-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .rukun-number, .syarat-number {
+    margin: 0 0 10px 0;
+    align-self: center;
+  }
+
+  .rukun-content h4, .syarat-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .sub-list {
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-title {
+    font-size: 1.6rem;
+  }
+
+  .content-body {
+    padding: 15px;
+  }
+
+  .rukun-list, .syarat-list {
+    gap: 10px;
+  }
+}
+
+/* Clean footer styling */
+.footer {
+  background: linear-gradient(135deg, rgb(1, 33, 22), rgb(130, 165, 80));
+  color: white;
+  padding: 40px 0 25px;
+  margin-top: 0;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+
+
+
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgb(208, 237, 167);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: rgb(208, 237, 167);
+  border-radius: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  padding: 3px 0;
+}
+
+.footer-links a:hover {
+  color: rgb(208, 237, 167);
+  transform: translateX(5px);
+}
+
+.footer-links a::before {
+  content: '→';
+  margin-right: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+}
+
+.footer-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid rgb(208, 237, 167);
+  margin-top: 10px;
+}
+
+.footer-info p {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-quote {
+  font-style: italic;
+  margin: 15px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid rgb(208, 237, 167);
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-link:hover {
+  background: rgb(208, 237, 167);
+  color: rgb(1, 33, 22);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0 20px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer-title {
+    font-size: 1.1rem;
+  }
+  
+  .footer-info {
+    padding: 12px;
+  }
+  
+  .footer-social {
+    gap: 12px;
+  }
+  
+  .social-link {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 0 15px;
+  }
+  
+  .footer-content {
+    padding: 0 15px;
+  }
+  
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  
+  .footer-quote {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+
+
+
+
+/* Wudhu Steps Styling */
+.wudhu-steps {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 20px 0;
+}
+
+.wudhu-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(182, 215, 135, 0.1);
+  border-radius: 15px;
+  border-left: 4px solid rgb(130, 165, 80);
+  transition: all 0.3s ease;
+}
+
+.wudhu-step:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(182, 215, 135, 0.2);
+}
+
+.step-number {
+  background: linear-gradient(135deg, rgb(130, 165, 80), rgb(1, 33, 22));
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h6 {
+  color: rgb(1, 33, 22);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.step-content .arabic-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin: 10px 0;
+  text-align: center;
+  color: rgb(1, 33, 22);
+  font-weight: 500;
+}
+
+.step-content .transliteration {
+  font-style: italic;
+  margin: 8px 0;
+  color: #555;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.step-content .translation {
+  color: #333;
+  margin: 8px 0;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.step-content p {
+  color: #555;
+  line-height: 1.5;
+  margin: 8px 0 0 0;
+  font-size: 0.95rem;
+}
+
+.wudhu-notes {
+  background: rgba(182, 215, 135, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid rgb(130, 165, 80);
+  margin-top: 20px;
+}
+
+.wudhu-notes h6 {
+  color: rgb(1, 33, 22);
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.wudhu-notes ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.wudhu-notes li {
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.wudhu-notes li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design for Wudhu Steps */
+@media (max-width: 768px) {
+  .wudhu-step {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .step-number {
+    margin: 0 0 15px 0;
+    align-self: center;
+  }
+  
+  .step-content h6 {
+    font-size: 1.2rem;
+  }
+  
+  .step-content .arabic-text {
+    font-size: 1.2rem;
+  }
+  
+  .wudhu-steps {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .wudhu-step {
+    padding: 12px;
+  }
+  
+  .step-content h6 {
+    font-size: 1.1rem;
+  }
+  
+  .step-content .arabic-text {
+    font-size: 1.1rem;
+  }
+  
+  .wudhu-notes {
+    padding: 15px;
+  }
+}
+
+/* RINGKASAN INDEX.HTML: Perkecil jarak antar section dan card */
+.container.mt-3 {
+  margin-top: 16px !important;
+  margin-bottom: 8px !important;
+}
+
+.row.justify-content-center.mb-3 {
+  margin-bottom: 8px !important;
+}
+
+.card.text-center {
+  margin-bottom: 8px !important;
+}
+
+.row > [class^="col"] {
+  margin-bottom: 8px !important;
+}
+
+.card.h-100 {
+  margin-bottom: 0 !important;
+}
+
+.card-header.bg-success {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-body {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+  .container.mt-3 {
+    margin-top: 10px !important;
+    margin-bottom: 4px !important;
+  }
+  .row.justify-content-center.mb-3 {
+    margin-bottom: 4px !important;
+  }
+  .card.text-center {
+    margin-bottom: 4px !important;
+  }
+  .row > [class^="col"] {
+    margin-bottom: 4px !important;
+  }
+}
+
+
+
+

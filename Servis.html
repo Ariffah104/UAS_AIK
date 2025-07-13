@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIK4</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="/UAS_AIK/img/logo.jpg" alt="Logo" height="40" />
+          </a>
+
+          <!-- Toggle button for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Offcanvas menu -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Navigation links -->
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active mx-lg-2" aria-current="page" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="Gerakan_Sholat.html">Tata Cara Sholat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="Servis.html">Doa-doa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="Detile.html">Deskripsi</a>
+                </li>
+              </ul>
+
+              <!-- Search form -->
+              <form class="d-flex mt-3 mt-lg-0" role="search" onsubmit="performSearch(event)">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Cari istighfar, tahlil, tasbih, doa, dzikir..." aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Nvbar-->
+
+    <!-- Hero Section-->
+    <section class="hero-section">
+      <div class="Teks_header">
+        <h1>Kumpulan Doa-Doa Dan Zikir</h1>
+      </div>
+    </section>
+    <!-- End Hero Section-->
+    <main>
+      <div class="container-fluid">
+        <h1 class="main-title text-center">Dzikir Dan Doa Setelah Sholat</h1>
+        <div class="row justify-content-center">
+          <!-- Dzikir 1 -->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>1. Istighfar</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Membaca istighfar 3 kali</div>
+                <div class="repetition">Dibaca 3x</div>
+                <div class="arabic-text">أَسْتَغْفِرُ اللَّهَ</div>
+                <div class="transliteration"><strong>Astaghfirullah</strong></div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">"Saya memohon ampun kepada Allah SWT."</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dzikir 2 -->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>2. Doa Allahumma Antas Salaam</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Dilanjutkan dengan "Allahumma Antas Salaam..."</div>
+                <div class="arabic-text">اللَّهُمَّ أَنْتَ السَّلاَمُ وَمِنْكَ السَّلاَمُ تَبَارَكْتَ يَا ذَا الْجَلاَلِ وَالْإِكْرَامِ</div>
+                <div class="transliteration">Allahumma antas salaam wa minkas salaam tabaarakta yaa dzal jalaali wal ikram</div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">"Ya Allah, Engkau Yang Maha Sejahtera, dan dari-Mu kesejahteraan, Maha Berkah Engkau wahai Dzat yang memiliki keagungan dan kemuliaan."</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dzikir 3 -->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>3. Tahlil dan Tahmid Panjang</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Dilanjutkan dengan membaca</div>
+                <div class="arabic-text">
+                  لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ لاَحَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ لاَ إِلَهَ إِلاَّ
+                  اللَّهُ وَلاَ نَعْبُدُ إِلاَّ إِيَّاهُ وَلَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ لَا إِلَهَ إِلاَّ اللَّهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ
+                </div>
+                <div class="transliteration">
+                  Laa ilaaha illallahu wahdahu laa syariikalahu. Lahul mulku walahul hamdu wa huwa alaa kulli syai'in qadiir. Laa hawla walaa quwwata illaa billaah. Laa ilaaha illallahu walaa na'budu
+                  illaa iyyaahu lahun ni'matu walahu fadhlu walahu tstsanaa'ul hasanu. Laa ilaaha illallahu mukhlishiina lahud diina walau karihal kaafiruun
+                </div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">
+                    "Tiada tuhan yang berhak diibadahi selain Allah, tiada sekutu bagi-Nya, bagi-Nya segala kerajaan, dan pujian, dan Dia Maha Berkuasa atas segala sesuatu. Tiada daya dan upaya serta
+                    kekuatan kecuali dengan pertolongan Allah dan kami tidak beribadah kecuali kepada Allah, milik-Nya-lah segala kenikmatan, karunia, dan sanjungan yang baik, tiada tuhan yang berhak
+                    diibadahi selain Allah, kami mengikhlaskan agama untuk-Nya walaupun orang-orang kafir benci."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dzikir 4 -->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>4. Tahlil dengan Doa Perlindungan</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Dilanjutkan dengan membaca</div>
+                <div class="arabic-text">
+                  لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ اللَّهُمَّ لاَ مَانِعَ لِمَا أَعْطَيْتَ وَلاَ مُعْطِيَ لِمَا
+                  مَنَعْتَ وَلاَ يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ
+                </div>
+                <div class="transliteration">
+                  Laa ilaaha illallahu wahdahu laa syariikalahu. Lahul mulku walahul hamdu wa huwa alaa kulli syai'in qadiir. Allahumma laa maani'a limaa a'thoita. Wa laa mu'thiya limaa mana'ta. Wa
+                  laa yanfa'u dzal jaddi minkal jaddu
+                </div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">
+                    "Tiada Tuhan selain Allah semata, tiada sekutu bagi-Nya. Dialah yang memiliki segala kekuasaan dan Dia pula yang memiliki segala pujian, dan Dia Maha Kuasa atas segala sesuatu. Ya
+                    Allah, tidak ada satupun yang menghalangi apa saja yang Engkau berikan, dan tidak ada satupun yang dapat memberi apa saja yang Engkau halangi. Dan kekayaan itu tidak berguna bagi
+                    pemiliknya (untuk menyelamatkan diri) dari (siksa)Mu."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dzikir 5 -->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>5. Tasbih, Tahmid, dan Takbir</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Membaca takbir, tasbih, dan tahmid masing-masing 33 kali</div>
+                <div class="repetition">Masing-masing 33x</div>
+
+                <div class="row">
+                  <div class="col-md-4 text-center mb-3">
+                    <div class="arabic-text">اللهُ أَكْبَرُ</div>
+                    <div class="transliteration">Allahu Akbar</div>
+                    <small class="text-muted">(33 kali)</small>
+                  </div>
+                  <div class="col-md-4 text-center mb-3">
+                    <div class="arabic-text">سُبْحَانَ اللهِ</div>
+                    <div class="transliteration">Subhanallah</div>
+                    <small class="text-muted">(33 kali)</small>
+                  </div>
+                  <div class="col-md-4 text-center mb-3">
+                    <div class="arabic-text">الْحَمْدُ للهِ</div>
+                    <div class="transliteration">Alhamdulillah</div>
+                    <small class="text-muted">(33 kali)</small>
+                  </div>
+                </div>
+
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">Allah Maha Besar (33 kali), Maha suci Allah (33 kali), segala puji bagi Allah (33 kali)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dzikir 6 -->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>6. Penutup Tahlil</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Membaca tahlil sebagai penutup dzikir</div>
+                <div class="arabic-text">لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</div>
+                <div class="transliteration">Laa ilaaha illallahu wahdahu laa syariikalahu. Lahul mulku walahul hamdu, yuhyii wayumiitu. Wahuwa 'alaa kulli syai'in qadiir</div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">
+                    "Tidak ada ilah yang berhak diibadahi dengan benar melainkan hanya Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya segala kerajaan dan bagi-Nya pula segala pujian. Dialah yang
+                    menghidupkan (orang yang sudah mati atau memberi ruh janin yang akan dilahirkan) dan yang mematikan. Dialah Yang Mahakuasa atas segala sesuatu."
+                  </div>
+                </div>
+
+                <div class="special-notes">
+                  <h6>Selanjutnya membaca:</h6>
+                  <ul>
+                    <li><strong>Ayat Kursi</strong> (1 kali)</li>
+                    <li><strong>Surat Al-Ikhlas</strong> (3 kali)</li>
+                    <li><strong>Surat Al-Falaq</strong> (3 kali)</li>
+                    <li><strong>Surat An-Naas</strong> (3 kali)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--- Doa Setelah Sholat-->
+          <div class="col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>Doa Setelah Sholat</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Dilanjutkan dengan membaca</div>
+                <div class="arabic-text">
+                  اَللّٰهُمَّ اِنَّا نَسْئَلُكَ سَلَامَةً فِى الدِّيْنِ، وَعَافِيَةً فِى الْجَسَدِ وَزِيَادَةً فِى الْعِلْمِ وَبَرَكَةً فِى الرِّزْقِ وَتَوْبَةَ قَبْلَ الْمَوْتِ وَرَحْمَةً عِنْدَ
+                  الْمَوْتِ وَمَغْفِرَةً بَعْدَ الْمَوْتِ، اَللّٰهُمَّ هَوِّنْ عَلَيْنَا فِيْ سَكَرَاتِ الْمَوْتِ، وَنَجَاةً مِنَ النَّارِ وَالْعَفْوَعِنْدَ الْحِسَابِ، رَبَّنَا لاَتُزِغْ قُلُوْبَنَا
+                  بَعْدَ اِذْهَدَيْتَنَا وَهَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً اِنَّكَ اَنْتَ الْوَهَّابُ، رَبَّنَا أَتِنَا فِى الدُّنْيَا حَسَنَةً وَفِي اْلأَخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
+                </div>
+                <div class="transliteration">
+                  Allahumma innaa nas-aluka salaamatan fid diini wa 'afiyatan fil jasadi wa ziyaadatan fil 'ilmi wa barokatan fir rizqi wa taubatan qablal mauti wa rohmatan 'indal mauti wa maghfirotan
+                  ba'dal mauti, allahummaa hawwin 'alainaa fil sakaraatil mauti wannajaata minan naari wal 'afwa 'indal hisaabi, rabbanaa laa tuzigh quluubana ba'da idz hadaitanaa wahab lanaa mil
+                  ladunka rahma, innaka antal wahhaab, rabbanaa aatinaa fiddunnyaa hasanah, wa fil akhirati hasanah waqinaa 'adzaa ban naar.
+                </div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">
+                    "Ya Allah, kami memohon kepada-Mu keselamatan dalam agama, dan kesejahteraan/kesegaran pada tubuh dan penambahan ilmu, dan keberkahan rezeki, serta taubat sebelum mati dan rahmat
+                    di waktu mati, dan keampunan sesudah mati. Ya Allah, mudahkanlah kami saat pencabutan nyawa selamat dari api neraka dan mendapat kemaafan ketika amal diperhitungkan. Ya Allah,
+                    janganlah Engkau goyahkan hati kami setelah Engkau beri petunjuk dan berilah kami rahmat dari sisi-Mu. Sesungguhnya Engkau Maha Pemberi. Ya Tuhan kami, berilah kami kebaikan hidup
+                    di dunia dan kebaikan hidup di akhirat, dan jagalah kami dari siksa api neraka."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <p style="color: white; opacity: 0.8">
+            <em>Semoga dzikir kita diterima oleh Allah SWT. Aamiin Ya Rabbal Alamiin.</em>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="Gerakan_Sholat.html">Tata Cara Sholat</a></li>
+                        <li><a href="Servis.html">Doa-doa</a></li>
+                        <li><a href="Detile.html">Deskripsi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Dzikir & Doa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#istighfar">Istighfar</a></li>
+                        <li><a href="#salaam">Doa Allahumma Antas Salaam</a></li>
+                        <li><a href="#tahlil">Tahlil & Tahmid</a></li>
+                        <li><a href="#perlindungan">Doa Perlindungan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Informasi</h4>
+                    <div class="footer-info">
+                        <p>Kumpulan dzikir dan doa setelah sholat yang lengkap dengan bacaan Arab, transliterasi, dan artinya.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="footer-quote">
+                "إِنَّ اللَّهَ مَعَ الصَّابِرِينَ"<br>
+                Sesungguhnya Allah bersama orang-orang yang sabar
+            </div>
+            
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+
+    <script>
+      // Fungsi untuk menangani parameter URL saat halaman dimuat
+      function handleURLParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get('section');
+        
+        if (section) {
+          // Cari section berdasarkan judul
+          const headers = document.querySelectorAll('.card-header h3');
+          for (let header of headers) {
+            if (header.textContent.toLowerCase().includes(section.toLowerCase())) {
+              setTimeout(() => {
+                header.closest('.dzikir-card').scrollIntoView({ 
+                  behavior: 'smooth', 
+                  block: 'center' 
+                });
+                header.closest('.dzikir-card').classList.add('search-result-highlight');
+              }, 500);
+              return;
+            }
+          }
+        }
+      }
+
+      // Panggil fungsi saat halaman dimuat
+      document.addEventListener('DOMContentLoaded', handleURLParams);
+
+      // Fungsi pencarian untuk Servis.html
+      function performSearch(event) {
+        event.preventDefault();
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+        
+        if (!searchTerm) {
+          alert('Silakan masukkan kata kunci pencarian');
+          return;
+        }
+
+        // Mapping kata kunci ke bagian dalam halaman
+        const searchSections = {
+          'istighfar': 'Istighfar',
+          'astaghfirullah': 'Istighfar',
+          'ampun': 'Istighfar',
+          'salaam': 'Doa Allahumma Antas Salaam',
+          'kesejahteraan': 'Doa Allahumma Antas Salaam',
+          'allahumma antas': 'Doa Allahumma Antas Salaam',
+          'tahlil': 'Tahlil dan Tahmid Panjang',
+          'laa ilaaha': 'Tahlil dan Tahmid Panjang',
+          'wahdahu': 'Tahlil dan Tahmid Panjang',
+          'syariikalahu': 'Tahlil dan Tahmid Panjang',
+          'perlindungan': 'Tahlil dengan Doa Perlindungan',
+          'maani\'a': 'Tahlil dengan Doa Perlindungan',
+          'tasbih': 'Tasbih, Tahmid, dan Takbir',
+          'tahmid': 'Tasbih, Tahmid, dan Takbir',
+          'takbir': 'Tasbih, Tahmid, dan Takbir',
+          '33': 'Tasbih, Tahmid, dan Takbir',
+          'subhanallah': 'Tasbih, Tahmid, dan Takbir',
+          'alhamdulillah': 'Tasbih, Tahmid, dan Takbir',
+          'allahu akbar': 'Tasbih, Tahmid, dan Takbir',
+          'penutup': 'Penutup Tahlil',
+          'doa': 'Doa Setelah Sholat',
+          'setelah': 'Doa Setelah Sholat',
+          'sholat': 'Doa Setelah Sholat',
+          'salaamah': 'Doa Setelah Sholat',
+          'dzikir': 'Dzikir Dan Doa Setelah Sholat',
+          'setelah sholat': 'Dzikir Dan Doa Setelah Sholat'
+        };
+
+        // Cari kata kunci yang cocok
+        for (let keyword in searchSections) {
+          if (searchTerm.includes(keyword)) {
+            const targetTitle = searchSections[keyword];
+            const headers = document.querySelectorAll('.card-header h3');
+            
+            for (let header of headers) {
+              if (header.textContent.includes(targetTitle)) {
+                header.closest('.dzikir-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                header.closest('.dzikir-card').classList.add('search-result-highlight');
+                return;
+              }
+            }
+          }
+        }
+
+        // Jika tidak ditemukan dalam halaman ini, coba redirect ke halaman lain
+        if (searchTerm.includes('sholat') || searchTerm.includes('niat') || searchTerm.includes('takbir') || 
+            searchTerm.includes('rukuk') || searchTerm.includes('sujud') || searchTerm.includes('gerakan')) {
+          window.location.href = 'Gerakan_Sholat.html';
+          return;
+        }
+        
+        if (searchTerm.includes('wudhu') || searchTerm.includes('wudlu') || searchTerm.includes('bersuci')) {
+          window.location.href = 'Detile.html?section=Tuntunan%20Wudhu';
+          return;
+        }
+        
+        if (searchTerm.includes('rukun') || searchTerm.includes('syarat') || searchTerm.includes('sah')) {
+          window.location.href = 'Detile.html';
+          return;
+        }
+        
+        if (searchTerm.includes('jadwal') || searchTerm.includes('waktu sholat')) {
+          window.location.href = 'index.html';
+          return;
+        }
+
+        // Jika masih tidak ditemukan, berikan saran
+        alert('Tidak ditemukan hasil untuk: "' + searchTerm + '"\n\nCoba kata kunci:\n- istighfar, tahlil, tasbih, doa, dzikir\n- tahmid, takbir, perlindungan, penutup\n- sholat, niat, takbir, rukuk, sujud\n- wudhu, bersuci, rukun, syarat');
+      }
+    </script>
+  </head>
+</html>

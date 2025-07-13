@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIK4</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"/>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+    <!-- Navbar-->
+    <header>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/UAS_AIK/img/logo.jpg" alt="Logo" height="40">
+            </a>
+            
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Offcanvas menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- Navigation links -->
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2" aria-current="page" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="Gerakan_Sholat.html">Tata Cara Sholat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="Servis.html">Doa-doa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="Detile.html">Deskripsi</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Search form -->
+                    <form class="d-flex mt-3 mt-lg-0" role="search" onsubmit="performSearch(event)">
+                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Cari jadwal, sholat, doa, dzikir, wudhu, rukun..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <!-- End Nvbar-->
+
+    <!-- Hero Section-->
+     <section class="hero-section">
+      <div class="Teks_header">
+        <h1>خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ</h1>
+        <strong>"Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia."</strong>
+        <p>(HR. Ahmad, ath-Thabrani, ad-Daruqutni. Hadits ini dihasankan oleh al-Albani di dalam Shahihul Jami', No. 3289).</p>
+      </div>
+     </section>
+    <!-- End Hero Section-->
+
+
+    <!----MAIN (bagian tengah)-->
+    <main>
+    <div class="prayer-widget">
+        <div class="prayer-header">
+            <div class="title-section">
+                <h2 class="prayer-title">JADWAL SHOLAT</h2>
+                <p class="prayer-date" id="current-date">8 Juli 2025 / 1447H</p>
+            </div>
+            
+            <div class="clock-section">
+                <div class="time-display" id="current-time">
+                    <span id="hours">04</span><span class="colon">:</span><span id="minutes">43</span>
+                </div>
+            </div>
+            
+            <div class="location-section">
+                <select class="location-select" id="location-select">
+                    <option value="Pontianak">Kota Pontianak</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="prayer-times-grid">
+            <div class="prayer-time-item" data-prayer="imsak">
+                <div class="prayer-name">Imsak</div>
+                <div class="prayer-time">04:13</div>
+            </div>
+            <div class="prayer-time-item " data-prayer="subuh">
+                <div class="prayer-name">Subuh</div>
+                <div class="prayer-time">04:23</div>
+            </div>
+            <div class="prayer-time-item" data-prayer="dzuhur">
+                <div class="prayer-name">Dzuhur</div>
+                <div class="prayer-time">11:51</div>
+            </div>
+            <div class="prayer-time-item" data-prayer="ashar">
+                <div class="prayer-name">Ashar</div>
+                <div class="prayer-time">15:15</div>
+            </div>
+            <div class="prayer-time-item" data-prayer="magrib">
+                <div class="prayer-name">Magrib</div>
+                <div class="prayer-time">17:54</div>
+            </div>
+            <div class="prayer-time-item" data-prayer="isya">
+                <div class="prayer-name">Isya'</div>
+                <div class="prayer-time">19:08</div>
+            </div>
+        </div>
+    </div>
+    <!---Tata cara sholat -->
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Tata Cara Sholat</h5>
+                        <a href="Gerakan_Sholat.html" class="btn btn-primary">Lihat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-4 py-5">
+          <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-container">
+              <img src="/UAS_AIK/img/niat_sholat.png" class="card-img-top" alt="niat_sholat.png" />
+            </div>
+            <div class="card-body">
+              <div class="card-text-content">
+                <h5 class="card-title text-center mb-3">Niat Sholat</h5>
+                <div class="arabic-text text-center">اُصَلِّيْ فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى</div>
+                <div class="transliteration text-center">
+                  <strong>Usholli fardhol zuhri arba'a roka'aati mustaqbilal qiblati adaa an (sholat sendiri)/Ma'muuman (menjadi ma'mum)/Imaaman (menjadi imam) Lillaahi Ta'aalaa</strong>
+                </div>
+                <div class="translation text-center">
+                  <strong>Artinya:</strong> "Saya berniat sholat fardu Zuhur empat rakaat menghadap kiblat karena Allah Ta'ala/Ma'mum karena Allah Ta'ala/Imam karena Allah Ta'ala."
+                </div>
+              </div>
+              <div class="card-button-container text-center">
+                <button class="btn btn-primary">Dengarkan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Takbiratul Ihram -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-container">
+              <img src="/UAS_AIK/img/Takbiratul ihram.png" class="card-img-top" alt="Takbiratul ihram.png" />
+            </div>
+            <div class="card-body">
+              <div class="card-text-content">
+                <h5 class="card-title text-center mb-3">Takbiratul Ihram</h5>
+                <div class="arabic-text text-center">ٱللَّٰهُ أَكْبَرُ</div>
+                <div class="transliteration text-center"><strong>Allahu Akbar</strong></div>
+                <div class="translation text-center"><strong>Artinya:</strong> "Allah Maha Besar."</div>
+              </div>
+             <div class="card-button-container text-center">
+              <button class="btn btn-primary" onclick="playAudio('audio-takbir')">Dengarkan</button>
+              <audio id="audio-takbir" src="Audio Aik/Bacaan Takbir.MP3"></audio>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Doa Iftitah -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-container">
+              <img src="/UAS_AIK/img/membaca surah.png" class="card-img-top" alt="membaca surah.png" />
+            </div>
+            <div class="card-body">
+              <div class="card-text-content">
+                <h5 class="card-title text-center mb-3">Membaca Doa Iftitah</h5>
+                <div class="arabic-text text-center">
+                  اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ ، كَمَا بَاعَدْتَ بَيْنَ المَشْرِقِ وَالمَغْرِبِ ، اللَّهُمَّ نَقِّنِي مِنَ الخَطَايَا ، كَمَا يُنَقَّى الثَّوْبُ الأَبْيَضُ مِنَ
+                  الدَّنَسِ ، اللَّهُمَّ اغْسِلْ خَطَايَايَ بِالْمَاءِ ، وَالثَّلْجِ ، وَالبَرَدِ
+                </div>
+                <div class="transliteration text-center">
+                  <strong
+                    >Allahumma baaid baynii wa bayna khotoyaaya kamaa baa'adta baynal masyriqi wal maghrib. Allahumma naqqinii min khotoyaaya kamaa yunaqqots tsaubul abyadhu minad danas.
+                    Allahummagh-silnii min khotoyaaya bil maa-iwats tsalji wal barod</strong>
+                </div>
+                <div class="translation text-center">
+                  <strong>Artinya:</strong> "Wahai Allah jauhkanlah antara aku dan kesalahan-kesalahanku sebagaimana engkau jauhkan antara timur dan barat, ya Allah bersihkanlah aku dari kesalahan
+                  sebagaimana bersihnya baju putih dari kotoran, ya Allah basuhlah kesalahan-kesalahanku dengan air, salju dan air dingin."
+                </div>
+              </div>
+              <div class="card-button-container text-center">
+              <button class="btn btn-primary" onclick="playAudio('audio-iftitah')">Dengarkan</button>
+              <audio id="audio-iftitah" src="Audio Aik/Do'a Iftitah.MP3"></audio>
+            </div>
+            </div>
+          </div>
+        </div>
+         <div class="container-fluid px-4 py-5">
+       <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Kumpulan Zikir Dan Doa</h5>
+                        <a href="Servis.html" class="btn btn-primary">Lihat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--- Zikir -->
+        <div class="col">
+          <div class=" container col-lg-10 col-xl-8">
+            <div class="dzikir-card">
+              <div class="card-header">
+                <h3>1. Istighfar</h3>
+              </div>
+              <div class="card-body">
+                <div class="description">Membaca istighfar 3 kali</div>
+                <div class="repetition">Dibaca 3x</div>
+                <div class="arabic-text">أَسْتَغْفِرُ اللَّهَ</div>
+                <div class="transliteration"><strong>Astaghfirullah</strong></div>
+                <div class="meaning">
+                  <div class="meaning-label">Artinya:</div>
+                  <div class="meaning-text">"Saya memohon ampun kepada Allah SWT."</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ringkasan Rukun & Syarat -->
+        <div class="container mt-6">
+          <div class="row justify-content-center mb-2">
+            <div class="col-md-6 col-lg-4">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Rukun & Syarat Sholat</h5>
+                  <a href="Detile.html" class="btn btn-primary">Lihat Lengkap</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <!-- Rukun Sholat -->
+            <div class="col-lg-4 mb-3">
+              <div class="card h-100">
+                <div class="card-header bg-success text-white text-center">
+                  <h5 class="card-title mb-0">Rukun Sholat</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text small">Bagian-bagian penting dalam shalat yang wajib dilaksanakan dengan benar.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><strong>1.</strong> Niat</li>
+                    <li class="mb-2"><strong>2.</strong> Takbiratul Ihram</li>
+                    <li class="mb-2"><strong>3.</strong> Berdiri</li>
+                    <li class="mb-2"><strong>4.</strong> Al-Fatihah</li>
+                    <li class="mb-2"><strong>5.</strong> Rukuk & Sujud</li>
+                  </ul>
+                  <div class="text-center">
+                    <a href="Detile.html#rukun" class="btn btn-outline-success btn-sm">Lihat 13 Rukun</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Syarat Sah Sholat -->
+            <div class="col-lg-4 mb-3">
+              <div class="card h-100">
+                <div class="card-header bg-success text-white text-center">
+                  <h5 class="card-title mb-0">Syarat Sah Sholat</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text small">Ketentuan-ketentuan yang harus dipenuhi agar shalat sah dan diterima.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><strong>1.</strong> Beragama Islam</li>
+                    <li class="mb-2"><strong>2.</strong> Berakal Sehat</li>
+                    <li class="mb-2"><strong>3.</strong> Baligh</li>
+                    <li class="mb-2"><strong>4.</strong> Suci dari Hadats</li>
+                    <li class="mb-2"><strong>5.</strong> Suci dari Najis</li>
+                  </ul>
+                  <div class="text-center">
+                    <a href="Detile.html#syarat" class="btn btn-outline-success btn-sm">Lihat 10 Syarat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tuntunan Wudhu -->
+            <div class="col-lg-4 mb-3">
+              <div class="card h-100">
+                <div class="card-header bg-success text-white text-center">
+                  <h5 class="card-title mb-0">Tuntunan Wudhu</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text small">Syarat sah shalat yang harus dilakukan dengan tertib dan menyeluruh.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><strong>1.</strong> Niat Wudhu</li>
+                    <li class="mb-2"><strong>2.</strong> Membasuh Tangan</li>
+                    <li class="mb-2"><strong>3.</strong> Berkumur & Hidung</li>
+                    <li class="mb-2"><strong>4.</strong> Membasuh Wajah</li>
+                    <li class="mb-2"><strong>5.</strong> Membasuh Tangan & Kaki</li>
+                  </ul>
+                  <div class="text-center">
+                    <a href="Detile.html#wudhu" class="btn btn-outline-success btn-sm">Lihat 10 Langkah</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+     </div>
+</main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="Gerakan_Sholat.html">Tata Cara Sholat</a></li>
+                        <li><a href="Servis.html">Doa-doa</a></li>
+                        <li><a href="Detile.html">Deskripsi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Fitur Utama</h4>
+                    <ul class="footer-links">
+                        <li><a href="#prayer-widget">Jadwal Sholat</a></li>
+                        <li><a href="Gerakan_Sholat.html">Gerakan Sholat</a></li>
+                        <li><a href="Servis.html">Dzikir & Doa</a></li>
+                        <li><a href="Detile.html">Rukun & Syarat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Informasi</h4>
+                    <div class="footer-info">
+                        <p>Website pembelajaran Islam yang menyediakan panduan lengkap tata cara sholat, dzikir, dan doa-doa harian.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="footer-quote">
+                "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ"<br>
+                Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia
+            </div>
+            
+
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+    
+    <script>
+       // Fungsi untuk menghentikan semua audio yang sedang diputar
+      function stopAllAudio() {
+        const audioElements = document.querySelectorAll('audio');
+        audioElements.forEach(audio => {
+          audio.pause();
+          audio.currentTime = 0;
+        });
+      }
+      
+      // Fungsi untuk memutar audio dengan menghentikan yang lain terlebih dahulu
+      function playAudio(audioId) {
+        stopAllAudio();
+        const audio = document.getElementById(audioId);
+        if (audio) {
+          audio.play();
+        }
+      }
+
+        // Data waktu sholat untuk kota pontianak (update sesuai tanggal)
+        const prayerData = {
+            pontianak: {
+                imsak: "04:13", subuh: "04:23", dzuhur: "11:51", 
+                ashar: "15:15", magrib: "17:54", isya: "19:08"
+            },
+        };
+
+        // Fungsi untuk update waktu real-time
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+
+            // Peringatan masuk waktu sholat
+            const selectedCity = document.getElementById('location-select').value;
+            const prayers = prayerData[selectedCity];
+            const prayerTimes = [prayers.imsak, prayers.subuh, prayers.dzuhur, prayers.ashar, prayers.magrib, prayers.isya];
+            const prayerNames = ['Imsak', 'Subuh', 'Dzuhur', 'Ashar', 'Magrib', 'Isya\''];
+            for (let i = 0; i < prayerTimes.length; i++) {
+                const [h, m] = prayerTimes[i].split(':');
+                if (parseInt(hours) === parseInt(h) && parseInt(minutes) === parseInt(m) && seconds === '00') {
+                    alert('Waktu ' + prayerNames[i] + ' telah masuk!');
+                }
+            }
+        }
+
+        // Fungsi untuk update tanggal real-time
+        function updateDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long',
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            const dateString = now.toLocaleDateString('id-ID', options);
+            // Tanggal hijriah selalu 1447H
+            document.getElementById('current-date').textContent = `${dateString} / 1447H`;
+        }
+
+        // Fungsi untuk menentukan sholat berikutnya dengan countdown yang lebih akurat
+        function findNextPrayer() {
+            const now = new Date();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            const selectedCity = document.getElementById('location-select').value;
+            const prayers = prayerData[selectedCity];
+            
+            const prayersList = [
+                { name: 'Imsak', time: prayers.imsak, key: 'imsak' },
+                { name: 'Subuh', time: prayers.subuh, key: 'subuh' },
+                { name: 'Dzuhur', time: prayers.dzuhur, key: 'dzuhur' },
+                { name: 'Ashar', time: prayers.ashar, key: 'ashar' },
+                { name: 'Magrib', time: prayers.magrib, key: 'magrib' },
+                { name: 'Isya\'', time: prayers.isya, key: 'isya' }
+            ];
+            
+            let nextPrayer = null;
+            
+            for (let prayer of prayersList) {
+                const [hours, minutes] = prayer.time.split(':').map(Number);
+                const prayerMinutes = hours * 60 + minutes;
+                
+                if (currentMinutes < prayerMinutes) {
+                    nextPrayer = prayer;
+                    break;
+                }
+            }
+            
+            // Jika tidak ada sholat berikutnya hari ini, berarti menuju Subuh besok
+            if (!nextPrayer) {
+                nextPrayer = prayersList[1]; // Subuh
+                const [hours, minutes] = nextPrayer.time.split(':').map(Number);
+                const prayerMinutes = hours * 60 + minutes;
+                const timeDiff = (24 * 60) - currentMinutes + prayerMinutes;
+                
+                    const hoursDiff = Math.floor(timeDiff / 60);
+                    const minutesDiff = timeDiff % 60;
+                    
+                let countdownText = `menuju ${nextPrayer.name} besok`;
+                    if (hoursDiff > 0) {
+                        countdownText += ` (${hoursDiff} jam ${minutesDiff} menit)`;
+                    } else if (minutesDiff > 0) {
+                        countdownText += ` (${minutesDiff} menit)`;
+                    }
+                    
+                    document.getElementById('countdown-info').textContent = countdownText;
+                    return;
+                }
+            
+            // Hitung countdown untuk sholat berikutnya
+            const [hours, minutes] = nextPrayer.time.split(':').map(Number);
+            const prayerMinutes = hours * 60 + minutes;
+            const timeDiff = prayerMinutes - currentMinutes;
+            
+            const hoursDiff = Math.floor(timeDiff / 60);
+            const minutesDiff = timeDiff % 60;
+            
+            let countdownText = `menuju ${nextPrayer.name}`;
+            if (hoursDiff > 0) {
+                countdownText += ` (${hoursDiff} jam ${minutesDiff} menit)`;
+            } else if (minutesDiff > 0) {
+                countdownText += ` (${minutesDiff} menit)`;
+            } else {
+                countdownText += ` (sekarang)`;
+            }
+            
+            document.getElementById('countdown-info').textContent = countdownText;
+        }
+
+        // Fungsi untuk update waktu sholat
+        function updatePrayerTimes() {
+            const selectedCity = document.getElementById('location-select').value;
+            const prayers = prayerData[selectedCity];
+            
+            document.querySelector('[data-prayer="imsak"] .prayer-time').textContent = prayers.imsak;
+            document.querySelector('[data-prayer="subuh"] .prayer-time').textContent = prayers.subuh;
+            document.querySelector('[data-prayer="dzuhur"] .prayer-time').textContent = prayers.dzuhur;
+            document.querySelector('[data-prayer="ashar"] .prayer-time').textContent = prayers.ashar;
+            document.querySelector('[data-prayer="magrib"] .prayer-time').textContent = prayers.magrib;
+            document.querySelector('[data-prayer="isya"] .prayer-time').textContent = prayers.isya;
+            
+            highlightCurrentPrayer();
+            findNextPrayer();
+        }
+
+        // Fungsi untuk highlight waktu sholat saat ini dengan logika yang lebih baik
+        function highlightCurrentPrayer() {
+            const now = new Date();
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            const selectedCity = document.getElementById('location-select').value;
+            const prayers = prayerData[selectedCity];
+            
+            // Hapus semua class active
+            document.querySelectorAll('.prayer-time-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Tentukan waktu sholat yang sedang berlangsung
+            const prayerTimes = [
+                { name: 'imsak', time: prayers.imsak },
+                { name: 'subuh', time: prayers.subuh },
+                { name: 'dzuhur', time: prayers.dzuhur },
+                { name: 'ashar', time: prayers.ashar },
+                { name: 'magrib', time: prayers.magrib },
+                { name: 'isya', time: prayers.isya }
+            ];
+            
+            let activePrayer = 'subuh';
+            let lastPrayerTime = 0;
+            
+            for (let prayer of prayerTimes) {
+                const [hours, minutes] = prayer.time.split(':').map(Number);
+                const prayerMinutes = hours * 60 + minutes;
+                
+                if (currentMinutes >= prayerMinutes && prayerMinutes > lastPrayerTime) {
+                    activePrayer = prayer.name;
+                    lastPrayerTime = prayerMinutes;
+                }
+            }
+            
+            // Tambahkan class active ke waktu sholat yang sedang berlangsung
+            const activeElement = document.querySelector(`[data-prayer="${activePrayer}"]`);
+            if (activeElement) {
+                activeElement.classList.add('active');
+                
+                // Tambahkan efek visual tambahan
+                activeElement.style.animation = 'pulse 2s infinite';
+            }
+        }
+
+        // Event listener untuk perubahan lokasi
+        document.getElementById('location-select').addEventListener('change', updatePrayerTimes);
+
+        // Fungsi untuk menangani parameter URL saat halaman dimuat
+        function handleURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const section = urlParams.get('section');
+            
+            if (section) {
+                if (section === 'prayer-widget') {
+                    const prayerWidget = document.querySelector('.prayer-widget');
+                    if (prayerWidget) {
+                        setTimeout(() => {
+                            prayerWidget.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                            prayerWidget.classList.add('search-result-highlight');
+                        }, 500);
+                        return;
+                    }
+                } else if (section === 'ringkasan') {
+                    const ringkasanSection = document.querySelector('.container.mt-3');
+                    if (ringkasanSection) {
+                        setTimeout(() => {
+                            ringkasanSection.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'center' 
+                            });
+                            ringkasanSection.classList.add('search-result-highlight');
+                        }, 500);
+                        return;
+                    }
+                } else {
+                    // Cari section berdasarkan judul
+                    const headers = document.querySelectorAll('h2, h3, h5, .card-title');
+                    for (let header of headers) {
+                        if (header.textContent.toLowerCase().includes(section.toLowerCase())) {
+                            setTimeout(() => {
+                                header.closest('.content-card, .dzikir-card, .col, .card').scrollIntoView({ 
+                                    behavior: 'smooth', 
+                                    block: 'center' 
+                                });
+                                header.closest('.content-card, .dzikir-card, .col, .card').style.animation = 'searchPulse 2s ease-in-out';
+                            }, 500);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Inisialisasi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            updateClock();
+            updateDate();
+            updatePrayerTimes();
+            handleURLParams();
+            
+            // Update jam setiap detik
+            setInterval(updateClock, 1000);
+            
+            // Update tanggal setiap menit
+            setInterval(updateDate, 60000);
+            
+            // Update countdown dan highlight setiap menit
+            setInterval(function() {
+                findNextPrayer();
+                highlightCurrentPrayer();
+            }, 60000);
+        });
+
+        // Fungsi pencarian universal
+        function performSearch(event) {
+            event.preventDefault();
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (!searchTerm) {
+                alert('Silakan masukkan kata kunci pencarian');
+                return;
+            }
+
+            // Mapping kata kunci ke halaman dan section
+            const searchMapping = {
+                // Gerakan Sholat - Gerakan_Sholat.html
+                'sholat': { page: 'Gerakan_Sholat.html', section: null },
+                'shalat': { page: 'Gerakan_Sholat.html', section: null },
+                'niat': { page: 'Gerakan_Sholat.html', section: 'Niat Sholat' },
+                'takbir': { page: 'Gerakan_Sholat.html', section: 'Takbiratul Ihram' },
+                'rukuk': { page: 'Gerakan_Sholat.html', section: 'Rukuk' },
+                'ruku': { page: 'Gerakan_Sholat.html', section: 'Rukuk' },
+                'sujud': { page: 'Gerakan_Sholat.html', section: 'Sujud' },
+                'iftitah': { page: 'Gerakan_Sholat.html', section: 'Membaca Doa Iftitah' },
+                'fatihah': { page: 'Gerakan_Sholat.html', section: 'Membaca Surah Al-Fatihah' },
+                'ikhtidal': { page: 'Gerakan_Sholat.html', section: 'Ikhtidal' },
+                'tahiyat': { page: 'Gerakan_Sholat.html', section: 'Tahiyat Awal' },
+                'tasyahud': { page: 'Gerakan_Sholat.html', section: 'Tahiyat Awal' },
+                'salam': { page: 'Gerakan_Sholat.html', section: 'Salam' },
+                'gerakan': { page: 'Gerakan_Sholat.html', section: null },
+                'tata cara': { page: 'Gerakan_Sholat.html', section: null },
+                'usholli': { page: 'Gerakan_Sholat.html', section: 'Niat Sholat' },
+                'allahu akbar': { page: 'Gerakan_Sholat.html', section: 'Takbiratul Ihram' },
+                'subhanakallahumma': { page: 'Gerakan_Sholat.html', section: 'Rukuk' },
+                'attahiyyaatu': { page: 'Gerakan_Sholat.html', section: 'Tahiyat Awal' },
+                'assalamu alaikum': { page: 'Gerakan_Sholat.html', section: 'Salam' },
+                'zalzalah': { page: 'Gerakan_Sholat.html', section: 'Membaca Surah Pendek (Al-Zalzalah)' },
+                'surah pendek': { page: 'Gerakan_Sholat.html', section: 'Membaca Surah Pendek (Al-Zalzalah)' },
+                
+                // Doa dan Dzikir - Servis.html
+                'doa': { page: 'Servis.html', section: null },
+                'dzikir': { page: 'Servis.html', section: null },
+                'istighfar': { page: 'Servis.html', section: 'Istighfar' },
+                'tahlil': { page: 'Servis.html', section: 'Tahlil dan Tahmid Panjang' },
+                'tasbih': { page: 'Servis.html', section: 'Tasbih, Tahmid, dan Takbir' },
+                'tahmid': { page: 'Servis.html', section: 'Tasbih, Tahmid, dan Takbir' },
+                'astaghfirullah': { page: 'Servis.html', section: 'Istighfar' },
+                'laa ilaaha': { page: 'Servis.html', section: 'Tahlil dan Tahmid Panjang' },
+                'subhanallah': { page: 'Servis.html', section: 'Tasbih, Tahmid, dan Takbir' },
+                'alhamdulillah': { page: 'Servis.html', section: 'Tasbih, Tahmid, dan Takbir' },
+                'perlindungan': { page: 'Servis.html', section: 'Tahlil dengan Doa Perlindungan' },
+                'setelah sholat': { page: 'Servis.html', section: 'Doa Setelah Sholat' },
+                'salaam': { page: 'Servis.html', section: 'Doa Allahumma Antas Salaam' },
+                'wahdahu': { page: 'Servis.html', section: 'Tahlil dan Tahmid Panjang' },
+                '33': { page: 'Servis.html', section: 'Tasbih, Tahmid, dan Takbir' },
+                'penutup': { page: 'Servis.html', section: 'Penutup Tahlil' },
+                'allahumma antas': { page: 'Servis.html', section: 'Doa Allahumma Antas Salaam' },
+                
+                // Wudhu - Detile.html
+                'wudhu': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'wudlu': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'bersuci': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'nawaitu': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'bismillah': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'berkumur': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'hidung': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'wajah': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'tangan': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'kepala': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'telinga': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'kaki': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'mata kaki': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'asyhadu': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                'syahadat': { page: 'Detile.html', section: 'Tuntunan Wudhu' },
+                
+                // Rukun dan Syarat - Detile.html
+                'rukun': { page: 'Detile.html', section: 'Rukun Sholat' },
+                'syarat': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'sah': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'baligh': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'hadats': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'najis': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'aurat': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'kiblat': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'waktu': { page: 'Detile.html', section: 'Syarat Sah Sholat' },
+                'tertib': { page: 'Detile.html', section: 'Rukun Sholat' },
+                
+                // Jadwal Sholat - index.html
+                'jadwal': { page: 'index.html', section: 'prayer-widget' },
+                'waktu sholat': { page: 'index.html', section: 'prayer-widget' },
+                'subuh': { page: 'index.html', section: 'prayer-widget' },
+                'dzuhur': { page: 'index.html', section: 'prayer-widget' },
+                'ashar': { page: 'index.html', section: 'prayer-widget' },
+                'magrib': { page: 'index.html', section: 'prayer-widget' },
+                'isya': { page: 'index.html', section: 'prayer-widget' },
+                'imsak': { page: 'index.html', section: 'prayer-widget' },
+                'jam': { page: 'index.html', section: 'prayer-widget' },
+                
+                // Ringkasan di index.html
+                'ringkasan rukun': { page: 'index.html', section: 'ringkasan' },
+                'ringkasan syarat': { page: 'index.html', section: 'ringkasan' },
+                'ringkasan wudhu': { page: 'index.html', section: 'ringkasan' }
+            };
+
+            // Cari kata kunci yang cocok
+            for (let keyword in searchMapping) {
+                if (searchTerm.includes(keyword)) {
+                    const target = searchMapping[keyword];
+                    
+                    // Jika target adalah halaman saat ini
+                    if (target.page === window.location.pathname.split('/').pop() || 
+                        (target.page === 'index.html' && window.location.pathname.endsWith('/'))) {
+                        
+                        // Coba scroll ke section yang sesuai
+                        if (target.section) {
+                            if (target.section === 'prayer-widget') {
+                                const prayerWidget = document.querySelector('.prayer-widget');
+                                if (prayerWidget) {
+                                    prayerWidget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    prayerWidget.classList.add('search-result-highlight');
+                                    return;
+                                }
+                            } else if (target.section === 'ringkasan') {
+                                const ringkasanSection = document.querySelector('.container.mt-3');
+                                if (ringkasanSection) {
+                                    ringkasanSection.scrollIntoView({ 
+                                        behavior: 'smooth', 
+                                        block: 'center' 
+                                    });
+                                    ringkasanSection.classList.add('search-result-highlight');
+                                    return;
+                                }
+                            } else {
+                                // Cari section berdasarkan judul
+                                const headers = document.querySelectorAll('h2, h3, h5, .card-title');
+                                for (let header of headers) {
+                                    if (header.textContent.toLowerCase().includes(target.section.toLowerCase())) {
+                                        header.closest('.content-card, .dzikir-card, .col, .card').scrollIntoView({ 
+                                            behavior: 'smooth', 
+                                            block: 'center' 
+                                        });
+                                        header.closest('.content-card, .dzikir-card, .col, .card').classList.add('search-result-highlight');
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Jika target adalah halaman lain, redirect dengan parameter
+                    if (target.page !== window.location.pathname.split('/').pop()) {
+                        if (target.section) {
+                            window.location.href = target.page + '?section=' + encodeURIComponent(target.section);
+                        } else {
+                            window.location.href = target.page;
+                        }
+                        return;
+                    }
+                }
+            }
+
+            // Jika tidak ada kata kunci yang cocok, coba cari berdasarkan karakteristik umum
+            if (searchTerm.includes('sholat') || searchTerm.includes('gerakan') || searchTerm.includes('niat') || 
+                searchTerm.includes('takbir') || searchTerm.includes('rukuk') || searchTerm.includes('sujud')) {
+                window.location.href = 'Gerakan_Sholat.html';
+                return;
+            }
+            
+            if (searchTerm.includes('doa') || searchTerm.includes('dzikir') || searchTerm.includes('istighfar') || 
+                searchTerm.includes('tahlil') || searchTerm.includes('tasbih') || searchTerm.includes('ampun')) {
+                window.location.href = 'Servis.html';
+                return;
+            }
+            
+            if (searchTerm.includes('wudhu') || searchTerm.includes('wudlu') || searchTerm.includes('bersuci') || 
+                searchTerm.includes('nawaitu') || searchTerm.includes('bismillah') || searchTerm.includes('berkumur')) {
+                window.location.href = 'Detile.html?section=Tuntunan%20Wudhu';
+                return;
+            }
+            
+            if (searchTerm.includes('rukun') || searchTerm.includes('syarat') || searchTerm.includes('sah')) {
+                window.location.href = 'Detile.html';
+                return;
+            }
+
+            // Jika masih tidak ditemukan, berikan saran
+            alert('Tidak ditemukan hasil untuk: "' + searchTerm + '"\n\nCoba kata kunci:\n- sholat, niat, takbir, rukuk, sujud\n- doa, dzikir, istighfar, tahlil, tasbih\n- wudhu, bersuci, nawaitu\n- rukun, syarat, sah sholat\n- jadwal, waktu sholat\n- ringkasan rukun, ringkasan syarat, ringkasan wudhu');
+        }
+    </script>
+  </body>
+</html>
